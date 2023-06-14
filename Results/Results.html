@@ -1,0 +1,56 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="main.css">
+
+
+</head>
+
+<body>
+  <div class="flex-container">
+    <div>
+      <p>Kалькулятор вкладов</p>
+      <hr />
+
+      Проценты по вкладам:<br />
+      <input type="radio" id="capital" name="rate" checked onchange="calculator()" />
+      Простые проценты (без капитализации)
+
+      <input type="radio" id="capital" name="rate" onchange="calculator()" />
+      Сложные проценты (с капитализацией)
+      <hr />
+      Введите сумму вклада
+      <input type="number" value="10000" id="p" onchange="calculator()" min="10000" max="100000000"
+        onKeyDown="return false"><br>
+
+      <input type="range" id="rangeSize" class="rangecolor" min="10000" max="100000000" id="range"
+        onchange="calculator()" style="width: 50%">
+      <hr />
+
+      Процентная ставка по депозиту
+      <input type="number" value="10" id="i" />
+      <hr />
+
+      Cрок размещения денежных средств
+      <select id="t" onchange="calculator()">
+        <option value="Месяц">Месяц</option>
+        <option value="3 Месяца">3 Месяца</option>
+        <option value="Полгода">Полгода</option>
+        <option value="Год">Год</option>
+      </select>
+      <hr />
+
+      Число дней в году
+      <input type="number" value="365" id="k" onchange="calculator()" />
+      <hr />
+      <button type="button" onclick="calculator()">Рассчитать:</button>
+      <hr />
+      <label id="result"></label>
+      <hr />
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
